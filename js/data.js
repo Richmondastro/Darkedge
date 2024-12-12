@@ -95,6 +95,11 @@ const schoolCodes = [
     SchoolCode: "DCK-A",
   },
   {
+    SchoolName: "Dharmaraja College, Kandy",
+    Team: "B",
+    SchoolCode: "DCK-B",
+  },
+  {
     SchoolName: "Devi Balika Vidyalaya, Colombo 08",
     Team: "A",
     SchoolCode: "DBC-A",
