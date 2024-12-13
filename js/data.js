@@ -250,6 +250,11 @@ const schoolCodes = [
     SchoolCode: "RCC-A",
   },
   {
+    SchoolName: "Royal College Colombo",
+    Team: "B",
+    SchoolCode: "RCC-B",
+  },
+  {
     SchoolName: "Sangamitta Balika Vidyalaya",
     Team: "A",
     SchoolCode: "SBG-A",
