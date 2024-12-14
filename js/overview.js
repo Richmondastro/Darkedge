@@ -20,31 +20,31 @@ tabButtons.forEach((button) => {
 });
 
 // Populate First Round Results Table and Cards
-// const firstResultsTable = document.getElementById("team-table-body-first");
-// const firstResultsCards = document.getElementById("results-cards-first");
+const firstResultsTable = document.getElementById("team-table-body-first");
+const firstResultsCards = document.getElementById("results-cards-first");
 
-// firstResultsTable.innerHTML = results
-//   .map((result) => {
-//     const { SchoolName, TeamCode, Marks, Place } = result;
-//     return `<tr>
-//       <td>${Place}</td>
-//       <td>${SchoolName}</td>
-//       <td>${TeamCode}</td>
-//       <td>${Marks}</td>
-//     </tr>`;
-//   })
-//   .join("");
+firstResultsTable.innerHTML = results
+  .map((result) => {
+    const { SchoolName, TeamCode, Marks, Place } = result;
+    return `<tr>
+      <td>${Place}</td>
+      <td>${SchoolName}</td>
+      <td>${TeamCode}</td>
+      <td>${Marks}</td>
+    </tr>`;
+  })
+  .join("");
 
-// firstResultsCards.innerHTML = results
-//   .map((result) => {
-//     const { SchoolName, TeamCode, Marks, Place } = result;
-//     return `<div class="results-card">
-//       <h4>${Place} - ${SchoolName}</h4>
-//       <p><strong>Team Code:</strong> ${TeamCode}</p>
-//       <p><strong>Marks:</strong> ${Marks}</p>
-//       </div>`;
-//     })
-//     .join("");
+firstResultsCards.innerHTML = results
+  .map((result) => {
+    const { SchoolName, TeamCode, Marks, Place } = result;
+    return `<div class="results-card">
+      <h4>${Place} - ${SchoolName}</h4>
+      <p><strong>Team Code:</strong> ${TeamCode}</p>
+      <p><strong>Marks:</strong> ${Marks}</p>
+      </div>`;
+  })
+  .join("");
 
 // Populate School Codes Table and Cards
 const schoolCodesTable = document.getElementById("team-table-body-school");
@@ -73,13 +73,13 @@ schoolCodesCards.innerHTML = schoolCodes
   .join("");
 
 // Search Functionality for Each Tab
-// document.getElementById("search-input-first").addEventListener("input", (e) => {
-//   filterTableAndCards(
-//     e.target.value,
-//     "team-table-body-first",
-//     "results-cards-first"
-//   );
-// });
+document.getElementById("search-input-first").addEventListener("input", (e) => {
+  filterTableAndCards(
+    e.target.value,
+    "team-table-body-first",
+    "results-cards-first"
+  );
+});
 
 document
   .getElementById("search-input-school")
