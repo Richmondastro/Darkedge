@@ -17,16 +17,16 @@ var x = setInterval(function () {
 
   // Countdown
   // Display the result in the element with id="demo"
-  document.getElementById(
-    "countdownTimer"
-  ).innerHTML = `<span class='register-text text-center'>Selection Round Will be happening in</span> <br /><br /> <p class='bg-dark day-counter'>${days}D ${hours}H ${minutes}m ${seconds}s </p>`;
+  // document.getElementById(
+  //   "countdownTimer"
+  // ).innerHTML = `<span class='register-text text-center'>Selection Round Will be happening in</span> <br /><br /> <p class='bg-dark day-counter'>${days}D ${hours}H ${minutes}m ${seconds}s </p>`;
 
-  // If the count down is finished, write some text
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("countdownTimer").innerHTML =
-      "<span class='register-text bg-info'>Selection Round Happening Now</span><br /><br /><a href='#' class='primary-btn'>Join Now</a>";
-  }
+  // // If the count down is finished, write some text
+  // if (distance < 0) {
+  //   clearInterval(x);
+  //   document.getElementById("countdownTimer").innerHTML =
+  //     "<span class='register-text bg-info'>Selection Round Happening Now</span><br /><br /><a href='#' class='primary-btn'>Join Now</a>";
+  // }
 }, 1000);
 
 //Countdown
