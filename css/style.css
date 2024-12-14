@@ -567,6 +567,52 @@ section {
 }
 
 /*---------------------
+  Papers
+-----------------------*/
+.papers {
+  background-color: #0b1a35;
+  padding: 5rem 4rem;
+}
+
+.events-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.event {
+  text-align: center;
+  max-width: 300px;
+}
+
+.event img {
+  width: 80%; /* Slightly smaller images */
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 153, 255, 0.5); /* Subtle blue glow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(0, 153, 255, 0.8); /* Stronger blue glow on hover */
+}
+
+.event h2 {
+  margin: 15px 0;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  color: #00c8ff; /* Bright cyan for headings */
+}
+
+.event p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #aad8ff; /* Light blue for text */
+}
+
+/*---------------------
   Work
 -----------------------*/
 .work {
@@ -1036,7 +1082,7 @@ section {
 -----------------------*/
 .about {
   background: #100028;
-  padding-bottom: 150px;
+  padding-bottom: 50px;
 }
 
 .about__pic__item {
@@ -2344,6 +2390,11 @@ input.invalid {
   .day-counter {
     width: 100%;
     padding: 0.5rem 0.75rem;
+  }
+
+  .papers {
+    background-color: #0b1a35;
+    padding: 5rem 2rem;
   }
 
   .counter__item {
