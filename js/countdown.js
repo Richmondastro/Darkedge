@@ -25,7 +25,7 @@ var x = setInterval(function () {
   if (distance < 0) {
     clearInterval(x);
     document.getElementById("countdownTimer").innerHTML =
-      "<span class='register-text bg-info'>Selection Round Happening Now</span><br /><br /><a href='#' class='primary-btn'>Join Now</a>";
+      "<span class='register-text bg-info'>Selection Round Happening Now</span><br /><br /><a href='https://us06web.zoom.us/j/83959708403?pwd=hCnbaBlaTi13xmb3Ab9PXu2xQoCzsv.1' class='primary-btn'>Join Now</a>";
   }
 }, 1000);
 
