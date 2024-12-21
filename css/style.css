@@ -2586,5 +2586,61 @@ input.invalid {
 
   .blog__details__quote {
     padding: 30px 40px 35px 35px;
+  } 
+}
+#snow-container {
+  position: fixed; /* Fixed position to stay on screen */
+  top: 0;
+  left: 0;
+  width: 100vw; /* Full width of the viewport */
+  height: 100vh; /* Full height of the viewport */
+  pointer-events: none; /* Prevent snowflakes from interfering with interactions */
+  z-index: 1000; /* Ensure snowflakes are above all content */
+  overflow: hidden; /* Hide any overflowing snowflakes */
+}
+
+.snow {
+  animation: fall 8s linear infinite, sway 4s ease-in-out infinite;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50%; /* Make snowflakes circular */
+  z-index: 1000; /* Ensure snowflakes are above main content */
+  opacity: 0; /* Hidden initially */
+}
+
+@keyframes fall {
+  0% {
+    top: -10px;
+    opacity: 0; /* Invisible before entering the viewport */
+  }
+  10% {
+    opacity: 1; /* Visible after entering the viewport */
+  }
+  90% {
+    opacity: 1; /* Fully visible while falling */
+  }
+  100% {
+    top: 100vh; /* Move to the bottom of the viewport */
+    opacity: 0; /* Fade out after leaving the viewport */
+  }
+}
+
+@keyframes sway {
+  0% {
+    margin-left: 0;
+  }
+  25% {
+    margin-left: 50px;
+  }
+  50% {
+    margin-left: -50px;
+  }
+  75% {
+    margin-left: 50px;
+  }
+  100% {
+    margin-left: 0;
   }
 }
