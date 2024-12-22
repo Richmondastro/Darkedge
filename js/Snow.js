@@ -2,7 +2,7 @@
 const snowContainer = document.getElementById('snow-container');
 
 // Set a limit on how many snowflakes are visible at once
-const maxSnowflakes = 15; // Visible snowflakes at a time
+const maxSnowflakes = 10; // Visible snowflakes at a time
 let currentSnowflakes = 0;
 
 function createSnowflake() {

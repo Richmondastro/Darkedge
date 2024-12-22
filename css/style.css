@@ -2588,6 +2588,7 @@ input.invalid {
     padding: 30px 40px 35px 35px;
   } 
 }
+
 #snow-container {
   position: fixed; /* Fixed position to stay on screen */
   top: 0;
@@ -2602,12 +2603,14 @@ input.invalid {
 .snow {
   animation: fall 8s linear infinite, sway 4s ease-in-out infinite;
   position: absolute;
-  width: 10px;
-  height: 10px;
-  background-color: #fff;
-  border-radius: 50%; /* Make snowflakes circular */
+  font-size: 20px; /* Adjust size for icons */
+  color: #fff; /* White color for icons */
   z-index: 1000; /* Ensure snowflakes are above main content */
   opacity: 0; /* Hidden initially */
+}
+
+.snow::before {
+  content: "\2744"; /* Unicode for a snowflake (❄) */
 }
 
 @keyframes fall {
