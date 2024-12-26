@@ -2760,8 +2760,8 @@ input.invalid {
 }
 
 .slide img {
-  width: 140px; /* Keeps image width consistent */
-  height: 140px; /* Keeps height consistent */
+  width: 100px; /* Keeps image width consistent */
+  height: 100px; /* Keeps height consistent */
   object-fit: contain; /* Ensures image is contained within the dimensions */
   border-radius: 8px;
   display: block;
