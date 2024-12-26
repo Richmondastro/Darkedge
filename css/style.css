@@ -2740,8 +2740,7 @@ input.invalid {
   max-width: 110%;
   margin: 50px auto;
   overflow: hidden;
-  background: #ffffff url('/img/scllogo/scl\ back.jpg') no-repeat center center; /* Add background image */
-  background-size: cover; /* Ensure the image covers the entire container */
+  background: transparent; /* Set background to transparent */
   border-radius: 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
