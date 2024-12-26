@@ -2775,3 +2775,72 @@ input.invalid {
   75% { transform: translateX(-75%); }
   100% { transform: translateX(-100%); }
 }
+
+
+/* Shooting star */
+/* Ensure the stars are always on top */
+.shooting-star,
+.falling-star {
+  z-index: 9999; /* Higher than any other content */
+}
+
+/* Shooting star */
+.shooting-star {
+  position: fixed; /* Fixed position to stay relative to the viewport */
+  width: 15px;
+  height: 15px;
+  background: linear-gradient(45deg, white, transparent);
+  border-radius: 50%;
+  box-shadow: 0 0 10px white;
+  opacity: 0;
+  animation: shoot 4s infinite;
+}
+
+@keyframes shoot {
+  0% {
+    transform: translate(-50px, -50px) scale(0.5);
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(800px, 400px) scale(0.1);
+    opacity: 0;
+  }
+}
+
+/* Falling Stars */
+.falling-star {
+  position: fixed; /* Fixed position to stay relative to the viewport */
+  width: 15px;
+  height: 15px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 0 3px 1px white, 0 0 10px 3px white; /* Tail effect */
+  animation: fall 10s infinite linear, tail 5s infinite linear; /* Tail animation */
+  opacity: 0.8;
+}
+
+/* Keyframes for falling stars */
+@keyframes fall {
+  0% {
+    top: -10%;
+    left: calc(100% * random); /* Use a random starting position */
+    opacity: 0.8;
+  }
+  100% {
+    top: 110%; /* Move beyond the bottom of the viewport */
+    opacity: 0;
+  }
+}
+
+/* Keyframes for tail effect */
+@keyframes tail {
+  0% {
+    box-shadow: 0 0 3px 1px white, 0 0 10px 3px white;
+  }
+  100% {
+    box-shadow: 0 0 6px 2px white, 0 0 15px 5px white;
+  }
+}
