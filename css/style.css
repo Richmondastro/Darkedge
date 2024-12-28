@@ -2844,3 +2844,72 @@ input.invalid {
     box-shadow: 0 0 6px 2px white, 0 0 15px 5px white;
   }
 }
+
+/* agenda */
+
+
+.event-schedule {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.event-timeline {
+  position: relative;
+  padding: 20px 0;
+}
+
+.event-item {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Aligns items in the center */
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.event-time {
+  flex: 1;
+  text-align: right;
+  margin-right: 20px;
+  font-size: 1.1rem;
+  color: #8aa1c1;
+  font-weight: bold;
+}
+
+.event-bar {
+  width: 5px;
+  background: #3949ab;
+  height: 50px;
+  border-radius: 5px;
+}
+
+.event-description {
+  flex: 2;
+  margin-left: 20px;
+  font-size: 1.1rem;
+  background: #1b263b;
+  padding: 10px 15px;
+  border-radius: 8px;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  color: #ffffff;
+}
+
+.live {
+  background: #1e90ff;
+  color: #ffffff;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+      box-shadow: 0 0 10px rgba(30, 144, 255, 0.5);
+  }
+  50% {
+      box-shadow: 0 0 20px rgba(30, 144, 255, 1);
+  }
+  100% {
+      box-shadow: 0 0 10px rgba(30, 144, 255, 0.5);
+  }
+}
+
