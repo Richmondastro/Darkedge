@@ -1173,9 +1173,14 @@ section {
 /*---------------------
   About
 -----------------------*/
+/* Default desktop styling */
 .about {
-  background: #100028;
-  padding-bottom: 50px;
+  background-image: url("../img/nebula/new\ din.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  padding: 20px;
 }
 
 .about__pic__item {
@@ -2872,7 +2877,7 @@ input.invalid {
   text-align: right;
   margin-right: 20px;
   font-size: 1.1rem;
-  color: #8aa1c1;
+  color: #ffffff;
   font-weight: bold;
 }
 
