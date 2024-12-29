@@ -1175,12 +1175,12 @@ section {
 -----------------------*/
 /* Default desktop styling */
 .about {
-  background-image: url("../img/nebula/new\ din.jpg");
+  background-image: url("../img/nebula/nn.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   color: #fff;
-  padding-top: 25px;
+  padding-top: 35px;
 }
 
 .about__pic__item {
