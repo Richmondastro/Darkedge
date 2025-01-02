@@ -2339,6 +2339,11 @@ input.invalid {
   background-position: top center;
 }
 
+#galaxiaRules {
+  background: url("../img/nebula/starsde.jpg"),
+    linear-gradient(rgb(0, 0, 0), rgb(253, 253, 253));
+}
+
 /*--------------------------------- Responsive Media Quaries -----------------------------*/
 @media only screen and (min-width: 1200px) {
   .container {
