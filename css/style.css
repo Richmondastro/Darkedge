@@ -2512,10 +2512,6 @@ input.invalid {
     padding: 0.25rem 0.5rem;
   }
 
-  .galaxia {
-    background-image: 90%; /* Adjusted background size to be a little bit lower */
-  }
-
   .counter__item {
     margin-bottom: 30px;
     width: auto;
