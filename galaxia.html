@@ -28,6 +28,20 @@
       href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700"
       rel="stylesheet"
     />
+    <script>
+      function switchLanguage(lang) {
+        document.documentElement.lang = lang;
+        const enElements = document.querySelectorAll(".lang-en");
+        const siElements = document.querySelectorAll(".lang-si");
+        if (lang === "si") {
+          enElements.forEach((el) => (el.style.display = "none"));
+          siElements.forEach((el) => (el.style.display = "block"));
+        } else {
+          enElements.forEach((el) => (el.style.display = "block"));
+          siElements.forEach((el) => (el.style.display = "none"));
+        }
+      }
+    </script>
   </head>
 
   <body>
@@ -115,12 +129,29 @@
       <div class="container mt-3" id="howcompetitionworks">
         <div class="row">
           <div class="col-lg-12">
+            <div class="text-right">
+              <button
+                class="btn btn-sm btn-info"
+                onclick="switchLanguage('en')"
+              >
+                English
+              </button>
+              <button
+                class="btn btn-sm btn-info"
+                onclick="switchLanguage('si')"
+              >
+                සිංහල
+              </button>
+            </div>
             <div class="about__text text-center text-md-left">
-              <div class="section-title">
+              <div class="section-title lang-en">
                 <span>About</span>
                 <h2>GALAXIA</h2>
               </div>
-              <div class="about__text__desc">
+              <div class="section-title lang-si" style="display: none">
+                <h2>ගැලැක්සියා ගැන</h2>
+              </div>
+              <div class="about__text__desc lang-en">
                 <p>
                   The <strong>"GALAXIA"</strong> The Intra-School Sci-Fi Art
                   Competition is an exciting event for students who love science
@@ -145,6 +176,30 @@
                   </li>
                 </ul>
               </div>
+
+              <div class="about__text__desc lang-si" style="display: none">
+                <p>
+                  <strong> "GALAXIA"</strong> පාසල් අන්තඃ විද්‍යා ප්‍රබන්ධ
+                  චිත්‍ර තරඟය විද්‍යා ප්‍රබන්ධ, කලාව සහ නිර්මාණශීලී වීමට ප්‍රිය
+                  කරන සිසුන් සඳහා උද්යෝගිමත් වැඩසටහනකි. "Dark Edge 24" තරඟාවලියට
+                  සමගාමීව ක්‍රියත්මක වන මෙම වැඩසටහන විද්‍යා ප්‍රබන්ධ, නොදන්නා
+                  ක්ෂේත්‍ර ගවේෂණය කිරීම සඳහා සිසුන්ගේ කලා සහ ලිඛිත කුසලතා
+                  ඔප්නන්වන සිසුන් දිරිමත් කරන තරඟයකි. රිච්මන්ඩ් විද්‍යාලයේ තාරකා
+                  විද්‍යාව සහ අභ්‍යවකාශ විද්‍යා සංගමය විසින් පවත්වන ලබන මෙම තරඟය
+                  අභ්‍යවකාශ චාරිකා පිළිබඳව වැඩිදුර ඉගෙන ගැනීමට සිසුන් යොමු කරයි.
+                </p>
+                <ul>
+                  <li>
+                    ත්‍යාග:
+                    <strong>
+                      තරඟ කාණ්ඩවලට අදාල ඉහළම දක්ෂතාවය දක්වන තරඟකරුට ත්‍යාගයක්
+                      පිරිනමනු ලැබේ. මීට අමතරව, එක් එක් කාණ්ඩයේ හොඳම නිර්මාණ 3
+                      Dark Edge සමරු කලාපයේ ප්‍රකාශයට පත් කරන අතර Dark Edge
+                      තරඟාවලියේදී ද ප්‍රදර්ශනය කෙරේ.
+                    </strong>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -156,11 +211,14 @@
         <div class="row">
           <div class="col-lg-12">
             <div class="about__text text-center text-md-left">
-              <div class="section-title">
+              <div class="section-title lang-en">
                 <span>Rules and Regulations</span>
                 <h2>GALAXIA</h2>
               </div>
-              <div class="rules">
+              <div class="section-title lang-si" style="display: none">
+                <h2>නීති සහ රෙගුලාසි.</h2>
+              </div>
+              <div class="rules lang-en">
                 <p><strong>Categories:</strong></p>
                 <ul>
                   <li>
@@ -169,7 +227,7 @@
                   </li>
                   <li>
                     <strong>Articles:</strong> Sci-fi-themed articles or short
-                    stories ranging from 80-150 words.
+                    stories ranging from 80-150 words. (in any language)
                   </li>
                   <li>
                     <strong>Digital Art:</strong> Artwork created using digital
@@ -231,20 +289,109 @@
                     Submissions must be emailed or uploaded to the designated
                     platform before the deadline.
                   </li>
+                  <br />
                   <ul>
                     <li>
                       <strong
                         >All entries must be received before January 15. Late
                         submissions will not be accepted.</strong
                       >
+                    </li>
+                    <br />
+                    <li>
+                      <strong>File formats:</strong>
                       <ul>
-                        <li>
-                          <strong>File formats:</strong>
-                          <ul>
-                            <li>Manual and Digital Art: PNG or JPEG</li>
-                            <li>Articles: PDF or Word Document</li>
-                          </ul>
-                        </li>
+                        <li>Manual and Digital Art: PNG or JPEG</li>
+                        <li>Articles: PDF or Word Document</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </ul>
+              </div>
+
+              <div class="rules lang-si" style="display: none">
+                <p><strong>කාණ්ඩ: </strong></p>
+                <ul>
+                  <li>
+                    <strong> චිත්‍ර:</strong> පැන්සල්, තීන්ත හෝ පැස්ටල් වැනි
+                    භෞතික මාධ්‍ය භාවිතයෙන් සාදන ලද සියතුවම්
+                  </li>
+                  <li>
+                    <strong>ලිපි:</strong> වචන 80-150 දක්වා විහිදෙන විද්‍යා
+                    ප්‍රබන්ධ තේමා ලිපි හෝ කෙටි කතා(ඕනෑම භාෂාවකින්).
+                  </li>
+                  <li>
+                    <strong>ඩිජිටල් සිතුවම්: </strong> graphic designs, 3D
+                    modeling, හා digital illustrations ඇතුළුව ඩිජිටල් ක්‍රම
+                    භාවිතයෙන් නිර්මාණය කරන ලද කලා නිර්මාණ. [high-resolution
+                    files]
+                  </li>
+                </ul>
+                <br />
+                <p><strong>ලිපි සඳහා මාතෘකා:</strong></p>
+                <ul>
+                  <li>
+                    <strong>අවසාන මිනිසා:</strong> මිනිසුන් වඳ වී යාමට ආසන්නව
+                    ඇති පශ්චාත්-අපෝකැලිප්ටික් පෘථිවිය. අන්තිම පුද්ගලයාගේ හෝ දිවි
+                    ගලවා ගත් කුඩා පිරිසකගේ දර්ශනයෙන් කතාවක් ලියන්න.
+                  </li>
+                  <li>
+                    <strong>අභ්‍යවකාශ චාරිකා අනාගතය: </strong> ඉදිරි සියවසේ
+                    අභ්‍යවකාශ චාරිකාවේ දියුණුව ගැන සිතන්න. ආලෝකයට වඩා වේගවත්
+                    පියාසැරිය යථාර්ථයක් විය හැකිද? දුරස්ථ තාරකා සහ මන්දාකිණි
+                    ගවේෂණය කිරීමට මනුෂ්‍ය වර්ගයාගේ බලය යන්නෙන් අදහස් කරන්නේ
+                    කුමක්ද?
+                  </li>
+                </ul>
+                <br />
+                <p><strong>චිත්‍ර හා ඩිජිටල් නිර්මණ මාතෘකා:</strong></p>
+                <ul>
+                  <li>
+                    <strong> කළු කුහරයක් හරහා ගමනක්:</strong> කළු කුහරයක් හෝ
+                    උමගක් හරහා ගමන් කිරීම කෙබඳු වේදැයි සිතා බලන්න.
+                  </li>
+                  <li>
+                    <strong>අඟහරු මත මිනිස් ජනපදයක්:</strong>
+                    අඟහරු ග්‍රහයා මත සම්පූර්ණයෙන්ම සංවර්ධිත මිනිස් ජනපදයක් කෙබඳු
+                    විය හැකිද යන්න නිදර්ශනය කරන්න.
+                  </li>
+                </ul>
+                <br />
+                <p><strong>පොදු මාර්ගෝපදේශ:</strong></p>
+                <ul>
+                  <li>සියලුම රිච්මන්ඩ් විද්‍යාලයේ සිසුන්ට සහභාගී විය හැක.</li>
+                  <li>
+                    සියලුම සිසුන්ට එක් කාණ්ඩයකට වඩා ඇතුළත් වීමට වසර ඇත, නමුත්
+                    ඔවුන්ට ඉදිරිපත් කළ හැක්කේ එක් එක් කාණ්ඩයකට එක් නිර්මාණයක්
+                    පමණි.
+                  </li>
+                </ul>
+                <br />
+                <p><strong>ඉදිරිපත් කිරීමේ මාර්ගෝපදේශ:</strong></p>
+                <ul>
+                  <li>
+                    සියලුම ඇතුළත් කිරීම් ඉදිරිපත් කරන සිසුවා විසින් නිර්මාණය කළ
+                    යුතුය.
+                  </li>
+                  <li>
+                    අනුකරණය හෝ පිටපත් කරන ලද නිර්මාණ වහා තරඟයෙන් ඉවත් කිරීමට
+                    හේතු වේ.
+                  </li>
+                  <br />
+                  <ul>
+                    <li>
+                      <strong
+                        >සියලුම ඇතුළත් කිරීම් ජනවාරි 15 ට පෙර මෙම වෙබ් අඩවියෙන්
+                        උඩුගත කළ යුතුය. ප්‍රමාද වී ඉදිරිපත් කිරීම් පිළිගනු
+                        නොලැබේ</strong
+                      >
+                    </li>
+                    <br />
+                    <li>
+                      <strong>ගොනු ආකෘති:</strong>
+                      <ul>
+                        <li>චිත්‍ර සහ ඩිජිටල් කලාව: PNG හෝ JPEG</li>
+                        <li>ලිපි: PDF හෝ Word Document/li></li>
                       </ul>
                     </li>
                   </ul>
@@ -260,8 +407,11 @@
         <div class="row">
           <div class="col-lg-12">
             <div class="about__text text-center text-md-left">
-              <div class="section-title">
+              <div class="section-title lang-en">
                 <span>Submission</span>
+                <h2>GALAXIA</h2>
+              </div>
+              <div class="section-title lang-si" style="display: none">
                 <h2>GALAXIA</h2>
               </div>
               <div class="about__text__desc">
@@ -273,13 +423,23 @@
                       alt="Articles"
                       class="card-img"
                     />
-                    <div class="card-content">
+                    <div class="card-content lang-en">
                       <h3>Articles</h3>
                       <a
                         href="https://forms.gle/u4VJLo7yf2Eh3XjQA"
                         class="simple-button"
                         target="_blank"
                         >Submit Here</a
+                      >
+                    </div>
+
+                    <div class="card-content lang-si" style="display: none">
+                      <h3>ලිපි</h3>
+                      <a
+                        href="https://forms.gle/u4VJLo7yf2Eh3XjQA"
+                        class="simple-button"
+                        target="_blank"
+                        >මෙතැනින් ඉදිරිපත් කරන්න</a
                       >
                     </div>
                   </article>
@@ -291,13 +451,23 @@
                       alt="Manual Art"
                       class="card-img"
                     />
-                    <div class="card-content">
+                    <div class="card-content lang-en">
                       <h3>Manual Art</h3>
                       <a
                         href="https://forms.gle/NxPqtPL6chySyxJA9"
                         class="simple-button"
                         target="_blank"
                         >Submit Here</a
+                      >
+                    </div>
+
+                    <div class="card-content lang-si" style="display: none">
+                      <h3>චිත්‍ර:</h3>
+                      <a
+                        href="https://forms.gle/NxPqtPL6chySyxJA9"
+                        class="simple-button"
+                        target="_blank"
+                        >මෙතැනින් ඉදිරිපත් කරන්න</a
                       >
                     </div>
                   </article>
@@ -309,13 +479,23 @@
                       alt="Digital Art"
                       class="card-img"
                     />
-                    <div class="card-content">
+                    <div class="card-content lang-en">
                       <h3>Digital Art</h3>
                       <a
                         href="https://forms.gle/qLSUsdrRCAZqgE3q8"
                         class="simple-button"
                         target="_blank"
                         >Submit Here</a
+                      >
+                    </div>
+
+                    <div class="card-content lang-si" style="display: none">
+                      <h3>ඩිජිටල් සිතුවම්:</h3>
+                      <a
+                        href="https://forms.gle/qLSUsdrRCAZqgE3q8"
+                        class="simple-button"
+                        target="_blank"
+                        >මෙතැනින් ඉදිරිපත් කරන්න</a
                       >
                     </div>
                   </article>
