@@ -3242,3 +3242,98 @@ ul.timeline li .event-description::before {
     font-size: 0.875rem;
   }
 }
+
+/* Increased image size */
+.article-card {
+  width: 30%;
+  background-color: #ffffff;
+  border: 2px solid #e0e0e0; /* Added border */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.article-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  border-color: #007bff; /* Change border color on hover */
+}
+
+.card-img {
+  width: 100%;
+  height: 300px; /* Increased image size */
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.card-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.card-content p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* Unique button style */
+.simple-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background: linear-gradient(45deg, #007bff, #0056b3); /* Gradient background */
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 25px; /* Rounded pill shape */
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+  margin: 5px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.simple-button:hover {
+  background: linear-gradient(45deg, #0056b3, #003e7e); /* Darker gradient on hover */
+  transform: translateY(-3px); /* Slight hover lift */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Media Queries for Responsive Design */
+
+/* For tablets and smaller screens */
+@media (max-width: 768px) {
+  .article-card {
+    width: 48%; /* Two cards per row on tablet screens */
+  }
+
+  .card-img {
+    height: 250px; /* Slightly smaller images on tablets */
+  }
+}
+
+/* For mobile phones */
+@media (max-width: 480px) {
+  .events-container {
+    justify-content: center; /* Center the cards */
+  }
+
+  .article-card {
+    width: 100%; /* Full width for cards on mobile */
+    margin-bottom: 20px; /* Space between cards */
+  }
+
+  .card-img {
+    height: 200px; /* Smaller images on mobile */
+  }
+
+  .simple-button {
+    width: 100%; /* Make the button full width on mobile */
+    border-radius: 10px; /* Adjust button shape for mobile */
+  }
+}
