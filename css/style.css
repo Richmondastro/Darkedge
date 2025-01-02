@@ -2340,7 +2340,7 @@ input.invalid {
 }
 
 #galaxiaRules {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(253, 253, 253, 0.5)),
+  background: linear-gradient(rgba(0, 0, 0, 0.67), rgba(0, 0, 0, 0.67)),
     url("../img/nebula/starsde.jpg");
   background-size: cover;
   background-position: center;
