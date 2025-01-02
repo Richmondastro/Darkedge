@@ -2340,8 +2340,10 @@ input.invalid {
 }
 
 #galaxiaRules {
-  background: url("../img/nebula/starsde.jpg"),
-    linear-gradient(rgb(0, 0, 0), rgb(253, 253, 253));
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(253, 253, 253, 0.5)),
+    url("../img/nebula/starsde.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 /*--------------------------------- Responsive Media Quaries -----------------------------*/
