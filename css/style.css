@@ -3368,3 +3368,131 @@ ul.timeline li .event-description::before {
     border-radius: 10px; /* Adjust button shape for mobile */
   }
 }
+
+/* soviniour */
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Ensures consistent sizing across all elements */
+}
+
+/* Container Styling */
+.container123 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 85vh;
+  overflow: hidden; /* Prevents unnecessary scroll on desktop */
+}
+
+/* Flipbook Main Styling */
+.flipbook {
+  width: 150%;
+  max-width: 1200px;
+  height:800px;
+  padding: 10px;
+}
+
+/* Flipbook Hard Cover */
+.flipbook .hard {
+  background: #0B1B3A !important;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+}
+
+.flipbook .hard small {
+  font-style: italic;
+  font-weight: lighter;
+  opacity: 0.7;
+  font-size: 14px;
+}
+
+/* Flipbook Page */
+.flipbook .page {
+  background: #0990b9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.11);
+  height: 100%;
+  border-radius: 12px;
+  overflow: hidden; /* Ensures content stays inside the page */
+}
+
+.page img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the full container */
+  border-radius: 10px; /* Removes any border radius to fully align with edges */
+}
+
+.flipbook .page small {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .flipbook {
+    width: 100%; /* Full width for mobile */
+    height: auto; /* Allow flexible height */
+    padding: 10px;
+    overflow-y: auto; /* Add vertical scroll for mobile devices */
+    max-height: 90vh; /* Prevents overflowing viewport */
+  }
+
+  .flipbook .page {
+    height: auto;
+    padding: 10px;
+  }
+
+  .page img {
+    width: 100%; /* Maintain image aspect ratio */
+    height: auto;
+  }
+
+  .container123 {
+    min-height: auto; /* Flexible container height */
+    padding: 10px;
+    overflow: visible;
+  }
+}
+
+/* Tablet Responsive */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .flipbook {
+    width: 90%; /* Slightly reduced width for tablets */
+    height: auto;
+  }
+
+  .flipbook .page {
+    height: auto;
+    padding: 12px;
+  }
+
+  .page img {
+    width: 95%; /* Slight margin for better visibility */
+    height: auto;
+  }
+}
+
+/* Desktop Responsive */
+@media (min-width: 1025px) {
+  .flipbook {
+    width: 100%;
+    max-width: 1200px;
+    height: 400px;
+    padding: 0;
+  }
+
+  .page img {
+    width: 96%; /* Optimize for desktop */
+    height: 98%;
+  }
+}
+
