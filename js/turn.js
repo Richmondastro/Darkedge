@@ -1867,4 +1867,30 @@
     for (a in c) if (void 0 !== b.style[a]) return c[a];
   };
   f.findPos = C;
+
+  
+        // Zoom In
+        $('#zoomInIcon').click(function() {
+          zoomLevel += 0.1;
+          $(".flipbook").css("transform", `scale(${zoomLevel})`);
+        });
+
+        // Zoom Out
+        $('#zoomOutIcon').click(function() {
+          if (zoomLevel > 0.2) {
+            zoomLevel -= 0.1;
+            $(".flipbook").css("transform", `scale(${zoomLevel})`);
+          }
+        });
+
+        // Fullscreen
+        $('#fullscreenIcon').click(function() {
+          if (!document.fullscreenElement) {
+            document.documentElement.requestFullscreen();
+          } else {
+            if (document.exitFullscreen) {
+              document.exitFullscreen();
+            }
+          }
+        });
 })(jQuery);
