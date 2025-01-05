@@ -3496,3 +3496,29 @@ ul.timeline li .event-description::before {
   }
 }
 
+.flipbook-controls {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flipbook-icon {
+  font-size: 25px;
+  margin: 0 20px;
+  cursor: pointer;
+  color: #007bff;
+  transition: color 0.3s;
+}
+
+.flipbook-icon:hover {
+  color: #0056b3;
+}
+
+.flipbook {
+  transition: transform 0.3s ease;
+}
+
