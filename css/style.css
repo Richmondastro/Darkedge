@@ -2470,9 +2470,6 @@ input.invalid {
   .header__logo {
     max-width: 150px;
   }
-  .set-bg {
-    background-position: top right;
-  }
   .nav-logo {
     width: 70px;
   }
@@ -3367,6 +3364,15 @@ ul.timeline li .event-description::before {
     width: 100%; /* Make the button full width on mobile */
     border-radius: 10px; /* Adjust button shape for mobile */
   }
+
+  .about__text__desc ul {
+    list-style-type: none;
+  }
+
+  .about__text__desc ul ul {
+    margin-left: 20px;
+    padding-left: 0;
+  }
 }
 
 /* soviniour */
@@ -3390,13 +3396,13 @@ ul.timeline li .event-description::before {
 .flipbook {
   width: 150%;
   max-width: 1200px;
-  height:800px;
+  height: 800px;
   padding: 10px;
 }
 
 /* Flipbook Hard Cover */
 .flipbook .hard {
-  background: #0B1B3A !important;
+  background: #0b1b3a !important;
   color: #fff;
   font-weight: bold;
   border: none;
