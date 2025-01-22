@@ -1179,13 +1179,34 @@ section {
   About
 -----------------------*/
 /* Default desktop styling */
-.about {
-  background-image: url("../img/nebula/starsde.jpg");
+.about,
+.timeline,
+.agenda,
+.eventDetails {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   color: #fff;
   padding-top: 35px;
+}
+
+.about {
+  background-image: url("../img/nebula/stars.jpg");
+}
+.timeline {
+  background-image: url("../img/nebula/starsde.jpg");
+}
+.agenda {
+  background-image: url("../img/nebula/stars.jpg");
+}
+.eventDetails {
+  background-image: url("../img/nebula/starsde.jpg");
+}
+.secondRound {
+  background-image: url("../img/nebula/stars.jpg");
+}
+.inquiries {
+  background-image: url("../img/nebula/starsde.jpg");
 }
 
 .about__pic__item {
@@ -1214,9 +1235,21 @@ section {
   font-weight: 700;
   margin-bottom: 12px;
 }
+.about__text__desc h4 {
+  color: #ffffff;
+  font-size: 26px;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
 .about__text__desc h5 {
   color: #ffffff;
   font-size: 22px;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+.about__text__desc h6 {
+  color: #ffffff;
+  font-size: 18px;
   font-weight: 400;
   margin-bottom: 8px;
 }
