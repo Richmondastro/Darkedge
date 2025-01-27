@@ -3566,3 +3566,156 @@ ul.timeline li .event-description::before {
 .flipbook-icon:hover {
   color: #0056b3;
 }
+
+
+/* Podium Container */
+.podium-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 30px;
+  flex-wrap: nowrap; /* Prevent wrapping on small screens */
+  padding: 0 10px; /* Fixed padding from left and right */
+}
+
+/* Podium Styling */
+.podium {
+  position: relative;
+  width: 170px; /* Base width for all podiums */
+}
+
+.podium.first {
+  width: 200px; /* Slightly larger for the first podium */
+}
+
+.podium-image {
+  width: 100%;
+  display: block;
+}
+
+/* Logo Styling */
+.podium-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 110px; /* Increased logo size */
+  z-index: 1;
+}
+
+.podium.first .podium-logo {
+  width: 130px; /* Larger logo for the first podium */
+}
+
+/* Responsive Design */
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .podium-container {
+    flex-direction: row; /* Ensure horizontal alignment */
+    gap: 15px; /* Reduce gap for small screens */
+    padding: 0 5px; /* Fixed padding for mobile screens */
+  }
+
+  .podium {
+    width: 110px; /* Smaller podiums for mobile */
+  }
+
+  .podium.first {
+    width: 130px; /* Larger first podium for mobile */
+  }
+
+  .podium-image {
+    width: 100%; /* Ensure images resize proportionally */
+  }
+
+  .podium-logo {
+    width: 70px; /* Adjusted logo size for mobile */
+  }
+
+  .podium.first .podium-logo {
+    width: 90px; /* Larger logo for the first podium */
+  }
+}
+
+/* Desktop View */
+@media (min-width: 769px) {
+  .podium-container {
+    flex-direction: row; /* Horizontal alignment */
+    padding: 0 10px; /* Fixed padding for desktop */
+  }
+
+  .podium {
+    width: 170px; /* Default podium width */
+  }
+
+  .podium.first {
+    width: 200px;
+  }
+
+  .podium-image {
+    width: 100%; /* Ensure images resize proportionally */
+  }
+
+  .podium-logo {
+    width: 110px; /* Extended logo size for desktop */
+  }
+
+  .podium.first .podium-logo {
+    width: 150px; /* Extended larger logo for the first podium */
+  }
+}
+
+/* Ultra Small Screens */
+@media (max-width: 375px) {
+  .podium-container {
+    flex-direction: row;
+    gap: 10px; /* Reduce gap for ultra-small screens */
+    padding: 0 5px; /* Fixed padding for ultra-small screens */
+  }
+
+  .podium {
+    width: 90px; /* Smaller podiums for ultra-small screens */
+  }
+
+  .podium.first {
+    width: 110px; /* Slightly larger first podium */
+  }
+
+  .podium-image {
+    width: 100%; /* Ensure images resize proportionally */
+  }
+
+  .podium-logo {
+    width: 60px; /* Smaller logo size */
+  }
+
+  .podium.first .podium-logo {
+    width: 80px; /* Larger logo for the first podium */
+  }
+}
+
+/* Custom button class */
+.claz {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  background-color: #00bfe7;
+  color: white;
+}
+
+/* Hover effect */
+.claz:hover {
+  opacity: 0.9;
+}
+
+/* Spacing for mobile layout */
+@media (max-width: 768px) {
+  .claz {
+    margin-bottom: 10px;
+  }
+}
+
