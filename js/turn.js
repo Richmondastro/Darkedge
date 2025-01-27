@@ -194,7 +194,20 @@
           touchMove: f.proxy(g._touchMove, this),
           touchEnd: f.proxy(g._touchEnd, this),
           start: f.proxy(g._eventStart, this),
+          keydown: f.proxy(function (e) {
+            const turnElement = this; 
+            if (e.key === "ArrowRight") {
+              e.preventDefault(); 
+              f(turnElement).turn("next"); 
+            } else if (e.key === "ArrowLeft") {
+              e.preventDefault(); 
+              f(turnElement).turn("previous"); 
+            }
+          }, this),
         };
+        
+        $(document).on("keydown", d.eventHandlers.keydown);
+        
         if (a.when) for (c in a.when) n(c, a.when) && this.bind(c, a.when[c]);
         this.css({ position: "relative", width: a.width, height: a.height });
         this.turn("display", a.display);

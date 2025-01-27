@@ -3436,6 +3436,8 @@ ul.timeline li .event-description::before {
   max-width: 1200px;
   height: 800px;
   padding: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 /* Flipbook Hard Cover */
