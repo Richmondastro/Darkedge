@@ -3529,8 +3529,8 @@ ul.timeline li .event-description::before {
 @media (min-width: 1025px) {
   .flipbook {
     width: 100%;
-    max-width: 1700px;
-    height: 500px;
+    max-width: 2480px;
+    height: 550px;
     padding: 0;
   }
 
