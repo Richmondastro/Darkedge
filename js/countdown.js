@@ -18,7 +18,7 @@ var x = setInterval(function () {
   if (distance < 0) {
     clearInterval(x);
     document.querySelector(".countdown-wrapper").innerHTML =
-      "<span class='register-text bg-info'>Final Round Happening Now</span>";
+      "<span class='register-text bg-info'>Final Round Concluded</span>";
   }
 }, 1000);
 
