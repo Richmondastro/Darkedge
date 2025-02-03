@@ -3705,7 +3705,7 @@ ul.timeline li .event-description::before {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  background-color: #00bfe7;
+  background-color: #092571;
   color: white;
 }
 
