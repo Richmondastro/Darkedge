@@ -19,6 +19,110 @@ tabButtons.forEach((button) => {
   });
 });
 
+// Function to render second round results
+function renderSecondRoundResults(data, tableBody, cardContainer) {
+  // Table rows
+  tableBody.innerHTML = data
+    .map((result) => {
+      const {
+        Place,
+        SchoolName,
+        Team,
+        MCQ,
+        GeneralAstronomy,
+        Astrophysics,
+        Cosmology,
+        Observation,
+        Rocketry,
+        SpotTest,
+        Total,
+        Rank,
+      } = result;
+
+      return `<tr>
+        <td>${Place}</td>
+        <td>${SchoolName}</td>
+        <td>${Team}</td>
+        <td>${MCQ}</td>
+        <td>${GeneralAstronomy}</td>
+        <td>${Astrophysics}</td>
+        <td>${Cosmology}</td>
+        <td>${Observation}</td>
+        <td>${Rocketry}</td>
+        <td>${SpotTest}</td>
+        <td>${Total}</td>
+      </tr>`;
+    })
+    .join("");
+
+  // Cards (mobile-friendly view)
+  cardContainer.innerHTML = data
+    .map((result) => {
+      const {
+        Place,
+        SchoolName,
+        Team,
+        MCQ,
+        GeneralAstronomy,
+        Astrophysics,
+        Cosmology,
+        Observation,
+        Rocketry,
+        SpotTest,
+        Total,
+        Rank,
+      } = result;
+
+      return `<div class="results-card">
+        <h4>${SchoolName}</h4>
+        <h4>Team ${Team}</h4>
+        <p><strong>Place:</strong> ${Place}</p>
+        <p><strong>MCQ:</strong> ${MCQ}</p>
+        <p><strong>General Astronomy:</strong> ${GeneralAstronomy}</p>
+        <p><strong>Astrophysics:</strong> ${Astrophysics}</p>
+        <p><strong>Cosmology:</strong> ${Cosmology}</p>
+        <p><strong>Observation:</strong> ${Observation}</p>
+        <p><strong>Rocketry:</strong> ${Rocketry}</p>
+        <p><strong>Spot Test:</strong> ${SpotTest}</p>
+        <p><strong>Total:</strong> ${Total}</p>
+      </div>`;
+    })
+    .join("");
+}
+
+// Get the table body and card container elements
+const secondRoundTableBody = document.getElementById("team-table-body-second");
+const secondRoundCards = document.getElementById("results-cards-second");
+
+// Search functionality for second round results
+document
+  .getElementById("search-input-second")
+  .addEventListener("input", (e) => {
+    const query = e.target.value.toLowerCase();
+
+    if (query.trim() === "") {
+      // Show all results if search input is empty
+      renderSecondRoundResults(
+        secondRoundResults,
+        secondRoundTableBody,
+        secondRoundCards
+      );
+    } else {
+      // Filter and show matching results
+      const filteredResults = secondRoundResults.filter((result) =>
+        result.SchoolName.toLowerCase().includes(query)
+      );
+      renderSecondRoundResults(
+        filteredResults,
+        secondRoundTableBody,
+        secondRoundCards
+      );
+    }
+  });
+
+// Initial render of second round results
+renderSecondRoundResults(secondRoundResults, secondRoundTableBody, secondRoundCards);
+
 // Populate First Round Results Table and Cards
 const firstResultsTable = document.getElementById("team-table-body-first");
 const firstResultsCards = document.getElementById("results-cards-first");

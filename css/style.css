@@ -1525,7 +1525,7 @@ input.invalid {
 }
 
 .container-results {
-  max-width: 1000px;
+  max-width: 1600px;
   margin: 0 auto;
   padding: 20px;
 }
@@ -1593,6 +1593,7 @@ input.invalid {
   overflow: hidden;
   background-color: #16152f;
   animation: fadeInTable 1s ease-out;
+  overflow-x: auto;
 }
 
 .team-table thead {
