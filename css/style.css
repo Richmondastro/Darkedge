@@ -1593,7 +1593,7 @@ input.invalid {
   overflow: hidden;
   background-color: #16152f;
   animation: fadeInTable 1s ease-out;
-  overflow-x: auto;
+  /* overflow-x: auto; */
 }
 
 .team-table thead {
