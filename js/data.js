@@ -899,7 +899,7 @@ const secondRoundResults = [
   },
   {
     Place: "9",
-    SchoolName: "Bandaranayake College",
+    SchoolName: "Bandaranayake Central College",
     Team: "B",
     MCQ: 24,
     GeneralAstronomy: 30,
@@ -955,7 +955,7 @@ const secondRoundResults = [
   },
   {
     Place: "13",
-    SchoolName: "Bandaranayake College",
+    SchoolName: "Bandaranayake Central College",
     Team: "A",
     MCQ: 36,
     GeneralAstronomy: 25,
